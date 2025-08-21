@@ -1,58 +1,77 @@
 # 🎬 Movie Recommendation System
 
-## 📌 Project Overview
-This project is a **Movie Recommendation System** built using **content-based filtering**.  
-It suggests movies similar to the one selected by the user, based on cosine similarity of feature vectors.  
-The system is deployed with **Streamlit** and uses the **IMDb Top 1000 dataset**.
+This project is a Machine Learning-powered web application that recommends movies similar to the one selected by the user.  
+It uses **content-based filtering** with **cosine similarity** on preprocessed movie feature vectors. The app is built with **Streamlit** and styled with a modern UI.
 
 ---
 
-## ⚙️ Tech Stack
-- **Python** 🐍  
-- **Libraries**: Streamlit, Scikit-learn, Pandas, NumPy, Pickle  
-- **Dataset**: IMDb Top 1000 movies (`imdb_top_1000.csv`)
+## 📌 Features
+
+- 🎥 Recommends top **N similar movies** based on your selection  
+- 🖼️ Displays **poster, release year, director, and genres**  
+- 🧠 Powered by a pre-trained similarity model (`.pkl`)  
+- 🖥️ Interactive and styled UI with **Streamlit**  
+- 🌄 Uses a background image for immersive experience  
 
 ---
 
-## 🚀 How It Works
-1. Preprocess the IMDb dataset and create a **movie dictionary** (vectorized features).  
-2. Store processed data in `movie_recommendation.pkl`.  
-3. Use **cosine similarity** to find the most similar movies to the one chosen.  
-4. Display results in a **modern UI** with movie posters, release year, genre, and director.
+## 🗂️ Project Files
+
+| File | Description |
+|------|-------------|
+| `app.py` | Streamlit application code with custom styling |
+| `recom_functions.py` | Functions for recommendation (cosine similarity + poster handling) |
+| `process.ipynb` | Notebook for preprocessing and feature extraction |
+| `imdb_top_1000.csv` | Dataset of IMDb Top 1000 movies |
+| `movie_recommendation.pkl` | Pickled movie dictionary + dataframe for fast retrieval |
+| `premium_photo.jpg` | Background image for the app |
+| `README.md` | Project documentation |
 
 ---
 
-## 📂 Project Structure
-├── app.py # Streamlit app with styled UI
-├── recom_functions.py # Functions for recommendations and poster links
-├── process.ipynb # Preprocessing & feature extraction notebook
-├── imdb_top_1000.csv # Dataset used
-├── movie_recommendation.pkl # Preprocessed movie dictionary + dataframe
-├── premium_photo.jpg # Background image for UI
-└── README.md # Project documentation
+## 🎯 Example Output
 
+If you select **"The Dark Knight"**, recommendations might be:
 
+- Batman Begins  
+- Inception  
+- The Prestige  
+- Interstellar  
+- Man of Steel  
 
-🎯 Example Output
-If you select "The Dark Knight", recommendations might be:
+Each recommendation includes:
+- 🎬 Poster  
+- 📅 Release Year  
+- 👨‍🎤 Director  
+- 🏷️ Genres (as styled chips)  
 
-Batman Begins
+---
 
-Inception
+## 🧰 Tech Stack
 
-The Prestige
+- **Frontend/UI**: Streamlit  
+- **Backend/Model**: Scikit-learn (cosine similarity)  
+- **Language**: Python  
+- **Dataset**: IMDb Top 1000  
+- **Other Tools**: pandas, numpy, pickle  
 
-Interstellar
+---
+## 🎯 Example Output
 
-Man of Steel
+If you select **"The Dark Knight"**, recommendations might be:
 
-Each recommendation shows:
+- Batman Begins  
+- Inception  
+- The Prestige  
+- Interstellar  
+- Man of Steel  
 
-🎬 Poster
+Each recommendation includes:
+- 🎬 Poster  
+- 📅 Release Year  
+- 👨‍🎤 Director  
+- 🏷️ Genres (as styled chips)  
 
-📅 Release Year
+---
 
-👨‍🎤 Director
-
-🏷️ Genres (as styled chips)
 
