@@ -15,6 +15,12 @@ It uses **content-based filtering** with **cosine similarity** on preprocessed m
 
 ---
 
+## 🚀 Live Demo
+
+👉 Try the app here: [Movie Recommendation System](https://akshayajkumar-movie-recommendation.streamlit.app)
+
+---
+
 ## 🗂️ Project Files
 
 | File | Description |
